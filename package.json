@@ -1,0 +1,9 @@
+{
+  "name": "Crazy Pizza API",
+  "version": "1.0.0",
+  "description": "Homework assignment #2 for Pirple Node JS master class",
+  "main": "index.js",
+  "author": {
+    "name": "M. Krzyk"
+  }
+}
