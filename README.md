@@ -1,6 +1,6 @@
 # Crazy Pizza API
 2nd homework assignment for [Pirple's NodeJS master class](https://pirple.thinkific.com/courses/the-nodejs-master-class).
-This project is a JSON RESTful dependency-free API for a pizza-delivery company utilizing Stripe and MailGun external services.
+This project is a JSON RESTful API free of 3rd-party dependencies for a pizza-delivery company utilizing Stripe and MailGun external services.
 
 # ROUTES
 Please populate the fields in your request according to the tables below. Required fields are marked with *.
