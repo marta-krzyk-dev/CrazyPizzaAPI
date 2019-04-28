@@ -34,7 +34,7 @@ This project is a JSON RESTful API free of 3rd-party dependencies for a pizza-de
 |`POST`   |`token`\* ||array of items*, eg. [{"id":1,"amount":2}]|Save an order to the shopping cart. `amount` field in the item is optional. If not supplied, it's set to 1.|
 |`DELETE`|`token`\* |`orderid`\*||Delete an order from user's shopping cart.|
 
-## ORDERS
+## PURCHASE
 |Method|Header|Query params|Payload|Desc|
 |------|---------------|----------------|----------------|----------------|
 |`POST`  |`token`*, `orderId`||array of items, eg. [{"id":1,"amount":2}]| If orderId header is set, the order is loaded from user's shopping cart. If payload is populated (just as in `POST` for `SHOPPINGCART` route), the order is loaded from it. If both are set, orderId precedes. If the payment is successful, a receipt is emailed.|
@@ -61,7 +61,7 @@ Optionally, one can set the environment as command line argument (with value of 
 2. Log in. (`TOKENS`, `POST`)
 3. View menu. (`MENU`, `GET`)
 4. Order a pizza. (`SHOPPINGCART`, `POST`)
-5. Pay for the order. (`ORDERS`, `POST`)
+5. Pay for the order. (`PURCHASE`, `POST`)
 6. Check email for a receipt.
 7. Log out. (`TOKENS`, `DELETE`)
 
@@ -88,6 +88,6 @@ Please populate the fields in your request according to the ROUTE tables above. 
 2. List existing orders (items chosen but not yet purchased).
 3. Delete an order.
 
-### Orders
+### Purchase
 1. Pay for an existing order.
 2. Send an order and pay for it all in one request.
