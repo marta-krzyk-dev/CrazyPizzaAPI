@@ -1,0 +1,1005 @@
+{
+	"info": {
+		"_postman_id": "cbb7b297-9759-41c5-8132-d49d506b5df7",
+		"name": "PizzaAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post a token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"mary@google.com\",\n\"password\" : \"password\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tokens",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens"
+					]
+				},
+				"description": "Requires email and password"
+			},
+			"response": []
+		},
+		{
+			"name": "Create user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"Mary\",\n\t\"lastName\" : \"Nieodkozery\",\n\t\"email\" : \"mary@google.com\",\n\t\"password\" : \"password\",\n\t\"streetAddress\" : \"Kleszczowa street 12, Melbourne 5678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTPS hello",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3001/default",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"default"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Jan 2019 19:25:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Please send a request to /hello to receive a greeting in Esperanto. For other language please add a query string, eg.: /hello?lang=en (English), be (Belarusian), cz (Czech), de (German), es (Spanish), esp (Esperanto), pl (Polish), ru (Russian).\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "tdo297xrisvrf9b5h2au",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"jane\",\n\t\"lastName\" : \"newsurname\",\n\t\"email\" : \"jane@google.com\",\n\t\"password\" : \"password\",\n\t\"streetAddress\" : \"Kleszczowka street 13, Melbourne 5678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "HTTPS hello",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:3001/default",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"default"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Jan 2019 19:25:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Please send a request to /hello to receive a greeting in Esperanto. For other language please add a query string, eg.: /hello?lang=en (English), be (Belarusian), cz (Czech), de (German), es (Spanish), esp (Esperanto), pl (Polish), ru (Russian).\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "i6lz0rz1bn5zxgl7mloj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"moore\",\n\t\"lastName\" : \"newsurname\",\n\t\"email\" : \"mary@google.com\",\n\t\"password\" : \"password\",\n\t\"streetAddress\" : \"Kleszczowka street 13, Melbourne 5678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users?token=i6lz0rz1bn5zxgl7mloj",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "i6lz0rz1bn5zxgl7mloj"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "token",
+						"value": "pnwce0ze77sj0kvw06w7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/users?",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Needs token in Headers and email in Params"
+			},
+			"response": []
+		},
+		{
+			"name": "Get token by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/tokens?id=6vzdcjlk8hkps7nvtsb2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6vzdcjlk8hkps7nvtsb2"
+						}
+					]
+				},
+				"description": "Requires token id in Params"
+			},
+			"response": []
+		},
+		{
+			"name": "Put a token",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"169oojl3srsjfjpygsjf\",\n    \"extend\": true\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tokens",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens"
+					]
+				},
+				"description": "Requires a valid token id and extend in body"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete token",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/tokens?id=d5hmpfdxtjggte7akvy8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tokens"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "d5hmpfdxtjggte7akvy8"
+						}
+					]
+				},
+				"description": "Requires token id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get menu",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "rss48hguji3m3r5xhm1v",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/menu",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"menu"
+					]
+				},
+				"description": "Required token in params"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a shopping cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "urjwt8zvkygfn08ovgj3",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				},
+				"description": "Required: valid token"
+			},
+			"response": []
+		},
+		{
+			"name": "Post an order no data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "y84grlnx52uwsl6ainy7",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":2},{\"id\":4,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a shopping cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "hcmcdvg8ewgvzxyfo0kc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":22},{\"id\":2,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST shoppingcart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "igbcga38zfabwtcasdh1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":2},{\"id\":2,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST shopping cart - Invalid amount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "rss48hguji3m3r5xhm1v",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":22},{\"id\":2,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST shopping cart  - invalid number of items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "rss48hguji3m3r5xhm1v",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1},{\"id\":2,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST shopping cart - empty order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "rss48hguji3m3r5xhm1v",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST shopping cart - Invalid field",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "rss48hguji3m3r5xhm1v",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":2,\"amount\":22},{\"incorrectfield!\":2,\"amount\":1}]"
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping cart - DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "0jk40rxtno1npwgf8t86",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart?orderid=1555100149759",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					],
+					"query": [
+						{
+							"key": "orderid",
+							"value": "1555100149759"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping cart - DELETE invalid",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "0jk40rxtno1npwgf8t86",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/shoppingcart?orderid=invalid",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shoppingcart"
+					],
+					"query": [
+						{
+							"key": "orderid",
+							"value": "invalid"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET user with invalid token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "nd2m0a0z73c0ygd35yjh",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"Hes\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users?email=ted@google.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ted@google.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\" : \"Ted\",\n\t\"lastName\" : \"Nieodkozery\",\n\t\"email\" : \"ted@google.com\",\n\t\"password\" : \"password\",\n\t\"streetAddress\" : \"Miodowa street 1112, Żory 5678\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "nd2m0a0z73c0ygd35yjh",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"firstName\":\"Hes\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/users?email=ted@google.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "ted@google.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "2ii7rfwv7ixw06pi210x",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"ted@google.com\"}"
+				},
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE no data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "ladgdou5zcz4wvcxz325",
+						"type": "text"
+					},
+					{
+						"key": "orderId",
+						"value": "1556381839356",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE with order payload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "ladgdou5zcz4wvcxz325",
+						"type": "text"
+					},
+					{
+						"key": "orderId",
+						"value": "1556381839356",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":1,\"amount\":2},{\"id\":3,\"amount\":6}]"
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE with orderId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "ladgdou5zcz4wvcxz325",
+						"type": "text"
+					},
+					{
+						"key": "orderId",
+						"value": "1556381839356",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE invalid orderId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "ladgdou5zcz4wvcxz325",
+						"type": "text"
+					},
+					{
+						"key": "orderId",
+						"value": "xyz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PURCHASE invalid order payload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "7im1w5ujbbz6r7bmyrw3",
+						"type": "text"
+					},
+					{
+						"key": "orderId",
+						"value": "1556447991011",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\"id\":1,\"amount\":3},{\"id\":3,\"amount\":5}]"
+				},
+				"url": {
+					"raw": "localhost:3000/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
