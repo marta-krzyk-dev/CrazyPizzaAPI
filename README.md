@@ -31,7 +31,7 @@ Please populate the fields in your request according to the tables below. Requir
 |Method|Header|Query params|Payload|Desc|
 |------|---------------|----------------|----------------|----------------|
 |`GET`   |`token`\*|||Get full list of existing, unpurchased orders for the user.|
-|`POST`   |`token`\* ||array of items*, eg. [{"id":1,"amount":2}]|Save an order to the shopping cart.|
+|`POST`   |`token`\* ||array of items*, eg. [{"id":1,"amount":2}]|Save an order to the shopping cart. `amount` field in the item is optional. If not supplied, it's set to 1.|
 |`DELETE`|`token`\* |`orderid`\*||Delete an order from user's shopping cart.|
 
 ## ORDERS
@@ -44,13 +44,13 @@ Please populate the fields in your request according to the tables below. Requir
 ## How to use?
 
 ### Basic scenario:
-1. Create a user. (USERS, POST)
-2. Log in. (TOKENS, POST)
-3. View menu. (MENU, GET)
-4. Order a pizza. (SHOPPINGCART, POST)
-5. Pay for the order. (ORDERS, POST)
+1. Create a user. (`USERS`, `POST`)
+2. Log in. (`TOKENS`, `POST`)
+3. View menu. (`MENU`, `GET`)
+4. Order a pizza. (`SHOPPINGCART`, `POST`)
+5. Pay for the order. (`ORDERS`, `POST`)
 6. Check email for a receipt.
-7. Log out. (TOKENS, DELETE)
+7. Log out. (`TOKENS`, `DELETE`)
 
 ## API functionalities by route
 ### Users
