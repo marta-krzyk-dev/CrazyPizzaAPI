@@ -41,7 +41,7 @@ This project is a JSON RESTful API free of 3rd-party dependencies for a pizza-de
 
 *Required
 
-## How to use?
+## Manual
 
 ### Set up
 0. Download the project.
