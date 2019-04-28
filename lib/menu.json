@@ -1,0 +1,34 @@
+[
+  {
+    "Id": 1,
+    "Name": "THE REUBEN",
+    "Price": 35.55,
+    "Ingredients": ["1000 island dressing", "canadian bacon", "sauerkraut", "mozzarella"],
+    "Vegetarian": false,
+    "Vegan": false
+  },
+  {
+    "Id": 2,
+    "Name": "BUFFALO CHICKEN",
+    "Price": 30.50,
+    "Ingredients": ["hot sauce", "grilled chicken", "onion", "mozzarella", "cheddar"],
+    "Vegetarian": false,
+    "Vegan": false
+  },
+  {
+    "Id": 3,
+    "Name": "VEGGIE’S VICTORY",
+    "Price": 28.55,
+    "Ingredients": ["pizza sauce", "mushroom", "onion", "green pepper", "tomato", "black olive", "mozzarella"],
+    "Vegetarian": true,
+    "Vegan": false
+  },
+  {
+    "Id": 4,
+    "Name": "CARROT CRAZE",
+    "Price": 19.99,
+    "Ingredients": ["sliced carrot", "mushroom", "pickles", "green pepper", "tomato", "black olive", "smoked chick peas"],
+    "Vegetarian": true,
+    "Vegan": true
+  }
+]
