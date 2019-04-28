@@ -3,7 +3,7 @@
 This project is a JSON RESTful API free of 3rd-party dependencies for a pizza-delivery company utilizing Stripe and MailGun external services.
 
 # ROUTES
-Please populate the fields in your request according to the tables below. Required fields are marked with *.
+
 ## USERS
 
 |Method|Header|Query params|Payload|Desc|
@@ -64,6 +64,8 @@ Optionally, one can set the environment as command line argument (with value of 
 5. Pay for the order. (`ORDERS`, `POST`)
 6. Check email for a receipt.
 7. Log out. (`TOKENS`, `DELETE`)
+
+Please populate the fields in your request according to the ROUTE tables above. Required fields are marked with *.
 
 ## API functionalities by route
 ### Users
