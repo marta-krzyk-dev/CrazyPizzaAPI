@@ -43,6 +43,19 @@ Please populate the fields in your request according to the tables below. Requir
 
 ## How to use?
 
+### Set up
+0. Download the project.
+1. Open the command prompt (for Windows, click Start icon and type in 'cmd') and go to the project directory.eg. :
+`cd C:/HelloAPI`
+2. Run the app:
+`node index.js`
+Optionally, one can set the environment as command line argument (with value of 'production' or 'staging'). The default is 'staging'.
+`node index.js production` (for Windows)
+`NODE_ENV=production node index.js` (for Linux)
+3. The app informs which ports are active.
+4. Open up a web browser or a tool like Postman. Start making requests. Follow the Basic scenario below to learn the most useful requests.
+5. Push `Ctrl` + `C` to stop the app.
+
 ### Basic scenario:
 1. Create a user. (`USERS`, `POST`)
 2. Log in. (`TOKENS`, `POST`)
