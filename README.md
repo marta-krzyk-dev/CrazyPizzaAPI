@@ -74,7 +74,7 @@ Please populate the fields in your request according to the ROUTE tables above. 
 1. Create a user (an account).
 2. Get user's data.
 3. Update user's data.
-4. Delete a user (an accont).
+4. Delete a user (an account).
 
 ### Tokens
 1. Create a token (log into an account).
