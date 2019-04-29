@@ -91,3 +91,6 @@ Please populate the fields in your request according to the ROUTE tables above. 
 ### Purchase
 1. Pay for an existing order.
 2. Send an order and pay for it all in one request.
+
+---
+Logo: Free Vector Art by Vecteezy.com
