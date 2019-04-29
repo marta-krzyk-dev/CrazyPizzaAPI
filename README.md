@@ -2,6 +2,8 @@
 2nd homework assignment for [Pirple's NodeJS master class](https://pirple.thinkific.com/courses/the-nodejs-master-class).
 This project is a JSON RESTful API free of 3rd-party dependencies for a pizza-delivery company utilizing Stripe and MailGun external services.
 
+![Logo]()
+
 # ROUTES
 
 ## USERS
